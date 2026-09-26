@@ -176,7 +176,7 @@ async function connectTikTok(room, username) {
 
 app.get("/api/health", (_, res) => res.json({ ok: true }));
 
-app.post("/api/rooms", (_, res) => {
+app.post("/api/rooms", (req, res) => {
   const room = {
     id: id(),
     key: crypto.randomBytes(18).toString("hex"),
